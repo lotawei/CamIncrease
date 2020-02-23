@@ -7,9 +7,9 @@
 //
 
 import Foundation
-
+import RxCocoa
 import RxSwift
-
+import RxDataSources
 struct Author {
     var  name:String!
     var  athelate:String!
@@ -43,7 +43,8 @@ struct VedioInfo {
 class IndexVedieManager:NSObject{
     static  var   shareInstance = IndexVedieManager()
     
-    var     recommandprevedioes:BehaviorSubject<[VedioInfo]> = BehaviorSubject.init(value: [])
+     var     recommandprevedioes = BehaviorSubject(value: [SectionModel<String,VedioInfo>]())
+    
     
     override init() {
         
@@ -52,7 +53,12 @@ class IndexVedieManager:NSObject{
             let  vedioinfo = VedioInfo.testdata()
             datas.append(vedioinfo)
         }
-        self.recommandprevedioes.onNext(datas)
+        let section = SectionModel.init(model: "", items: datas)
+        
+        self.recommandprevedioes.onNext([section])
+        
+        
+        
     }
     
     

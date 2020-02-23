@@ -10,13 +10,22 @@ import UIKit
 import RxSwift
 class BaseViewController: UIViewController {
     var  disposebag:DisposeBag = DisposeBag()
-    
+    var  barishidden:Bool = false
     override func viewDidLoad() {
         super.viewDidLoad()
+      
         
-        self.navigationController?.navigationBar.isHidden = true
+    
+    
     }
-
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.barishidden = self.navigationController?.navigationBar.isHidden ?? false
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.navigationBar.isHidden = self.barishidden
+    }
     deinit {
         print("已释放")
     }

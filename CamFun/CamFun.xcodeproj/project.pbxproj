@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		4726DF26174BE7F33FF531D7 /* Pods_CamFunTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25CD92452EE1D470F4FF75F4 /* Pods_CamFunTests.framework */; };
+		480BC1B624029E4E00DEBED6 /* MineInfoTopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480BC1B524029E4E00DEBED6 /* MineInfoTopCell.swift */; };
+		480BC1B824029E6200DEBED6 /* MineGradeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480BC1B724029E6200DEBED6 /* MineGradeCell.swift */; };
+		480BC1BA24029EB400DEBED6 /* MineMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480BC1B924029EB400DEBED6 /* MineMessageCell.swift */; };
+		480BC1BD2402A46200DEBED6 /* MineDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480BC1BC2402A46200DEBED6 /* MineDataModel.swift */; };
 		48654AA223FFC50D00A36C5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48654AA123FFC50D00A36C5D /* AppDelegate.swift */; };
 		48654AA423FFC50D00A36C5D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48654AA323FFC50D00A36C5D /* SceneDelegate.swift */; };
 		48654AA623FFC50D00A36C5D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48654AA523FFC50D00A36C5D /* BaseViewController.swift */; };
@@ -52,6 +56,10 @@
 		2462EC0B01ACD867BFC22361 /* Pods-CamFun-CamFunUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CamFun-CamFunUITests.release.xcconfig"; path = "Target Support Files/Pods-CamFun-CamFunUITests/Pods-CamFun-CamFunUITests.release.xcconfig"; sourceTree = "<group>"; };
 		25CD92452EE1D470F4FF75F4 /* Pods_CamFunTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CamFunTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		31713615137BD5535A23C859 /* Pods-CamFun-CamFunUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CamFun-CamFunUITests.debug.xcconfig"; path = "Target Support Files/Pods-CamFun-CamFunUITests/Pods-CamFun-CamFunUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		480BC1B524029E4E00DEBED6 /* MineInfoTopCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineInfoTopCell.swift; sourceTree = "<group>"; };
+		480BC1B724029E6200DEBED6 /* MineGradeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineGradeCell.swift; sourceTree = "<group>"; };
+		480BC1B924029EB400DEBED6 /* MineMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineMessageCell.swift; sourceTree = "<group>"; };
+		480BC1BC2402A46200DEBED6 /* MineDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineDataModel.swift; sourceTree = "<group>"; };
 		48654A9E23FFC50D00A36C5D /* CamFun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CamFun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48654AA123FFC50D00A36C5D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48654AA323FFC50D00A36C5D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +132,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		480BC1BB2402A44E00DEBED6 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				480BC1BC2402A46200DEBED6 /* MineDataModel.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
 		48654A9523FFC50D00A36C5D = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +165,7 @@
 		48654AA023FFC50D00A36C5D /* CamFun */ = {
 			isa = PBXGroup;
 			children = (
+				480BC1BB2402A44E00DEBED6 /* DataModel */,
 				48654AE9240137A200A36C5D /* Extension */,
 				48654AE62401354700A36C5D /* DataManager */,
 				48654AD723FFD0CF00A36C5D /* ViewController */,
@@ -203,6 +220,9 @@
 			isa = PBXGroup;
 			children = (
 				48654AF024013CE100A36C5D /* RecommandVedioCell.swift */,
+				480BC1B524029E4E00DEBED6 /* MineInfoTopCell.swift */,
+				480BC1B724029E6200DEBED6 /* MineGradeCell.swift */,
+				480BC1B924029EB400DEBED6 /* MineMessageCell.swift */,
 			);
 			path = "UIInterFace&Xib";
 			sourceTree = "<group>";
@@ -495,16 +515,20 @@
 			files = (
 				48654AA623FFC50D00A36C5D /* BaseViewController.swift in Sources */,
 				48654AE82401355900A36C5D /* IndexVedieManager.swift in Sources */,
+				480BC1B824029E6200DEBED6 /* MineGradeCell.swift in Sources */,
+				480BC1B624029E4E00DEBED6 /* MineInfoTopCell.swift in Sources */,
 				48654AE324012C4D00A36C5D /* MessageViewController.swift in Sources */,
 				48654AA223FFC50D00A36C5D /* AppDelegate.swift in Sources */,
 				48654AD923FFD0E500A36C5D /* LocationViewController.swift in Sources */,
 				48654ADD23FFF98A00A36C5D /* MainTabbarViewController.swift in Sources */,
 				48654AE124012BB400A36C5D /* MakeVideoViewController.swift in Sources */,
 				48654ADF2400047500A36C5D /* BaseNavgationController.swift in Sources */,
+				480BC1BD2402A46200DEBED6 /* MineDataModel.swift in Sources */,
 				48654AA423FFC50D00A36C5D /* SceneDelegate.swift in Sources */,
 				48654AEB240137B000A36C5D /* Int+Extension.swift in Sources */,
 				48654ADB23FFEC7500A36C5D /* IndexViewController.swift in Sources */,
 				48654AE524012C5700A36C5D /* MineViewController.swift in Sources */,
+				480BC1BA24029EB400DEBED6 /* MineMessageCell.swift in Sources */,
 				48654AF124013CE100A36C5D /* RecommandVedioCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

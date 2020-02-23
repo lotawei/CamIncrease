@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (4.9.1)
   - AMScrollingNavbar (5.5.2)
+  - Differentiator (4.0.1)
   - Kingfisher (4.10.1)
   - pop (1.0.12)
   - QorumLogs (0.9)
@@ -8,6 +9,10 @@ PODS:
   - RxCocoa (5.0.1):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
+  - RxDataSources (4.0.1):
+    - Differentiator (~> 4.0)
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
   - RxRelay (5.0.1):
     - RxSwift (~> 5)
   - RxSwift (5.0.1)
@@ -22,6 +27,7 @@ DEPENDENCIES:
   - QorumLogs
   - RAMAnimatedTabBarController
   - RxCocoa
+  - RxDataSources
   - RxSwift
   - SnapKit
   - SwiftyJSON
@@ -30,11 +36,13 @@ SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Alamofire
     - AMScrollingNavbar
+    - Differentiator
     - Kingfisher
     - pop
     - QorumLogs
     - RAMAnimatedTabBarController
     - RxCocoa
+    - RxDataSources
     - RxRelay
     - RxSwift
     - SnapKit
@@ -43,16 +51,18 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   AMScrollingNavbar: aed9ef17a94692ccd1d9a89769d87a379acb399a
+  Differentiator: 886080237d9f87f322641dedbc5be257061b0602
   Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
   pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
   QorumLogs: 9a484df6973a3697ac79fe2273140fde6b36dccc
   RAMAnimatedTabBarController: b5c821298071fded801532216ad8a24394f89859
   RxCocoa: e741b9749968e8a143e2b787f1dfbff2b63d0a5c
+  RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
   RxRelay: 89d54507f4fd4d969e6ec1d4bd7f3673640b4640
   RxSwift: e2dc62b366a3adf6a0be44ba9f405efd4c94e0c4
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: c6928bc56414124a9305d983950b95f03a79b107
+PODFILE CHECKSUM: 8d8c94545cc6a2b57218c3603b2a67058e9c91ec
 
 COCOAPODS: 1.8.4

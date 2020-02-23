@@ -12,38 +12,39 @@ import AMScrollingNavbar
 import SnapKit
 import RxSwift
 import RxCocoa
+import RxDataSources
 import pop
 class IndexViewController: BaseViewController ,ScrollingNavigationControllerDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     static func  sharevc() -> IndexViewController
     {
-           let  indexvc =  UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier:"IndexViewController") as! IndexViewController
-           return indexvc
+        let  indexvc =  UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier:"IndexViewController") as! IndexViewController
+        return indexvc
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
-        
+        self.navigationController?.navigationBar.isHidden = true
         //tableview bind
         self.tableViewDataInital()
-    
+        
         
     }
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
-    }
+ 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if let navigationController = self.navigationController as? ScrollingNavigationController {
             
             navigationController.followScrollView(self.tableView)
-             
-               
-           }
+            
+            
+        }
     }
-   
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+    }
     
 }
 
@@ -70,37 +71,41 @@ extension  IndexViewController{
         self.tableView.separatorColor = UIColor.clear
         self.tableView.separatorStyle  = .none
         
-      self.tableView.snp.makeConstraints { (make) in
+        self.tableView.snp.makeConstraints { (make) in
             make.left.right.top.bottom.equalTo(self.view)
         }
         self.tableView.rowHeight =  tableView.frame.size.height
-            self.tableView.showsVerticalScrollIndicator = false
+        self.tableView.showsVerticalScrollIndicator = false
         
-
-        IndexVedieManager.shareInstance.recommandprevedioes.asObserver().bind(to: tableView.rx.items) { (tableView, row, element) in
-                 let cell = tableView.dequeueReusableCell(withIdentifier: "RecommandVedioCell") as! RecommandVedioCell
-            cell.vedioinfoConfig(element)
-
-                 return cell
-             }.disposed(by: self.disposebag)
+        let rxdatasource = RxTableViewSectionedReloadDataSource<SectionModel<String,VedioInfo>> (
+            
+            configureCell: { dataSource, tableView, indexPath, item in
+                
+                
+                    
+                        let cell = tableView.dequeueReusableCell(withIdentifier: "RecommandVedioCell", for: indexPath) as! RecommandVedioCell
+                        cell.vedioinfoConfig(item)
+                        return cell
+                    
+            }
+        )
+        
+        IndexVedieManager.shareInstance.recommandprevedioes.asObserver().bind(to: tableView.rx.items(dataSource:rxdatasource)).disposed(by: self.disposebag)
+        
+        
         tableView.rx.willDisplayCell.subscribe(onNext: { cell, indexPath in
             let  smallscale = POPBasicAnimation.init(propertyNamed: kPOPLayerPositionX)
             smallscale?.fromValue = NSValue(cgPoint: CGPoint(x:-self.view.center.x, y:0))
             smallscale?.toValue = NSValue(cgPoint: CGPoint(x:self.view.center.x , y:0))
-                     
             smallscale?.duration = 0.7
-
             cell.pop_add(smallscale, forKey:"position.x")
-
-            
-         
-            
-             
         }).disposed(by: self.disposebag)
-            
+        
+        
+        
         
     }
-
+    
     
     
 }

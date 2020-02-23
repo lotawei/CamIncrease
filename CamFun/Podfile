@@ -5,6 +5,7 @@ target 'CamFun' do
   use_frameworks!
 	pod 'RxSwift'
     pod 'RxCocoa'
+    pod 'RxDataSources'
 	pod 'QorumLogs'
 	pod 'SwiftyJSON'
 	pod 'SnapKit'
@@ -15,6 +16,7 @@ target 'CamFun' do
   pod 'Kingfisher'
   # Pods for CamFun
   pod 'AMScrollingNavbar'
+
   target 'CamFunTests' do
     inherit! :search_paths
     # Pods for testing
