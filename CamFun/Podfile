@@ -1,0 +1,27 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '9.0'
+source 'https://github.com/CocoaPods/Specs.git'
+target 'CamFun' do
+  use_frameworks!
+	pod 'RxSwift'
+    pod 'RxCocoa'
+	pod 'QorumLogs'
+	pod 'SwiftyJSON'
+	pod 'SnapKit'
+	pod 'Alamofire'
+	
+ 	pod 'RAMAnimatedTabBarController'
+  pod 'pop'
+  pod 'Kingfisher'
+  # Pods for CamFun
+  pod 'AMScrollingNavbar'
+  target 'CamFunTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'CamFunUITests' do
+    # Pods for testing
+  end
+
+end
