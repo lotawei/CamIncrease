@@ -11,9 +11,13 @@ import Foundation
 extension  Int {
     
     
+    /// 区间随机数
+    /// - Parameters:
+    ///   - min: 最小值
+    ///   - max: 最大值
     static func randomCustom(min: Int, max: Int) -> Int {
         
-            var y = arc4random() % UInt32(max) + UInt32(min)
+            let y = arc4random() % UInt32(max) + UInt32(min)
         
             return Int(y)
     }

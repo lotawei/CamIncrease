@@ -11,9 +11,16 @@ import RxSwift
 class BaseViewController: UIViewController {
     var  disposebag:DisposeBag = DisposeBag()
     var  barishidden:Bool = false
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-      
+        if #available(iOS 11.0, *) {
+            self.view.insetsLayoutMarginsFromSafeArea = false
+        } else {
+            // Fallback on earlier versions
+        };
+          var  anima = ""
         
     
     

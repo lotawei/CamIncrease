@@ -12,7 +12,7 @@ import AMScrollingNavbar
 import pop
 import SnapKit
 import RxCocoa
-
+import RxDataSources
 
 
 
@@ -30,6 +30,7 @@ class MineViewController:BaseViewController,ScrollingNavigationControllerDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
         //自定义导航栏
+         self.navigationController?.navigationBar.isHidden = false
         navInital()
         //table init
         tableViewDataInital()
@@ -52,84 +53,73 @@ class MineViewController:BaseViewController,ScrollingNavigationControllerDelegat
         
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        self.navigationController?.navigationBar.isHidden = false
-        if let navigationController = self.navigationController as? ScrollingNavigationController {
-            
-            navigationController.followScrollView(self.tableView)
-            
-            
-        }
-    }
     
     
     
     
 }
 
-extension    MineViewController:UITableViewDelegate,UITableViewDataSource{
+extension    MineViewController:UITableViewDelegate{
     
     func  tableViewDataInital(){
         
-        if #available(iOS 11.0, *) {
-            self.tableView.contentInsetAdjustmentBehavior = .never
-        } else {
-            // Fallback on earlier versions
-        }
+        
         
         self.automaticallyAdjustsScrollViewInsets = false
         self.tableView.separatorColor = UIColor.clear
         self.tableView.separatorStyle  = .none
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
+        
         self.tableView.snp.makeConstraints { (make) in
-            make.left.right.top.bottom.equalTo(self.view)
+            make.top.equalTo(self.view).offset(statusnavheight)
+            make.left.right.equalTo(self.view)
+            make.bottom.equalTo(self.view).offset(-tabbarheight)
         }
         
+        let rxdatasource = RxTableViewSectionedReloadDataSource<SectionModel<String,MineDataModel>> (
+            
+            configureCell: { dataSource, tableView, indexPath, item in
+                
+                
+                if indexPath.row == 0 {  let cell = tableView.dequeueReusableCell(withIdentifier: "MineInfoTopCell") as! MineInfoTopCell
+                    
+                    return  cell
+                }
+                else  if  indexPath.row == 1 {
+                    let cell = tableView.dequeueReusableCell(withIdentifier: "MineGradeCell") as! MineGradeCell
+                    
+                    return  cell
+                    
+                    
+                }
+                else {
+                    let cell = tableView.dequeueReusableCell(withIdentifier: "MineMessageCell") as! MineMessageCell
+                    
+                    return  cell
+                }
+                
+                
+                
+                
+                
+                
+        }
+        )
         
+        MineDataManager.instance.minedatas.asObserver().bind(to: tableView.rx.items(dataSource:rxdatasource)).disposed(by: self.disposebag)
+        tableView.rx.setDelegate(self).disposed(by: self.disposebag)
         
     }
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return   3;
-        
-    }
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return  1
-    }
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.section == 0 {
-            let   topcell = tableView.dequeueReusableCell(withIdentifier: "MineInfoTopCell") as! MineInfoTopCell
-            
-            return  topcell
-            
-            
-        }
-        else if indexPath.section == 1 {
-            let   gradecell = tableView.dequeueReusableCell(withIdentifier: "MineGradeCell") as! MineGradeCell
-            
-            return  gradecell
-            
-            
-        }
-        else {
-            
-            let   messagecell = tableView.dequeueReusableCell(withIdentifier: "MineMessageCell") as! MineMessageCell
-            
-            return  messagecell
-        }
-    }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.section == 0 {
+        if indexPath.row == 0 {
             
             
             return  topcellheight
             
             
         }
-        else if indexPath.section == 1 {
+        else if indexPath.row == 1 {
             
             
             return  gradecellheight

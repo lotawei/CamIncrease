@@ -118,7 +118,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="s4m-OK-hZU">
                                 <rect key="frame" x="0.0" y="20" width="414" height="842"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MineInfoTopCell" rowHeight="450" id="FND-5k-Cug" userLabel="topcell" customClass="MineInfoTopCell" customModule="CamFun" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="450"/>
@@ -126,7 +126,20 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FND-5k-Cug" id="9LT-0a-Ap4">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="450"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="topback" translatesAutoresizingMaskIntoConstraints="NO" id="d4i-8H-qBe">
+                                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="160"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="160" id="yMV-oF-gYU"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
                                             <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="d4i-8H-qBe" firstAttribute="leading" secondItem="9LT-0a-Ap4" secondAttribute="leading" id="EEH-Ms-IIS"/>
+                                                <constraint firstItem="d4i-8H-qBe" firstAttribute="top" secondItem="9LT-0a-Ap4" secondAttribute="top" id="kHd-vQ-8Ur"/>
+                                                <constraint firstAttribute="trailing" secondItem="d4i-8H-qBe" secondAttribute="trailing" id="kP4-HV-53t"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MineGradeCell" rowHeight="332" id="zqC-Ig-Ec0" userLabel="zhanjicell" customClass="MineGradeCell" customModule="CamFun" customModuleProvider="target">
@@ -183,6 +196,7 @@
     </scenes>
     <resources>
         <image name="bgcell" width="500" height="313"/>
+        <image name="topback" width="480" height="252"/>
     </resources>
     <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
 </document>

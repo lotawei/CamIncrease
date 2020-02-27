@@ -12,6 +12,7 @@
 		480BC1B824029E6200DEBED6 /* MineGradeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480BC1B724029E6200DEBED6 /* MineGradeCell.swift */; };
 		480BC1BA24029EB400DEBED6 /* MineMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480BC1B924029EB400DEBED6 /* MineMessageCell.swift */; };
 		480BC1BD2402A46200DEBED6 /* MineDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480BC1BC2402A46200DEBED6 /* MineDataModel.swift */; };
+		480BC1BF2403A49E00DEBED6 /* PublicUse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480BC1BE2403A49E00DEBED6 /* PublicUse.swift */; };
 		48654AA223FFC50D00A36C5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48654AA123FFC50D00A36C5D /* AppDelegate.swift */; };
 		48654AA423FFC50D00A36C5D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48654AA323FFC50D00A36C5D /* SceneDelegate.swift */; };
 		48654AA623FFC50D00A36C5D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48654AA523FFC50D00A36C5D /* BaseViewController.swift */; };
@@ -30,6 +31,8 @@
 		48654AE82401355900A36C5D /* IndexVedieManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48654AE72401355800A36C5D /* IndexVedieManager.swift */; };
 		48654AEB240137B000A36C5D /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48654AEA240137B000A36C5D /* Int+Extension.swift */; };
 		48654AF124013CE100A36C5D /* RecommandVedioCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48654AF024013CE100A36C5D /* RecommandVedioCell.swift */; };
+		48678EA124053BE800560C58 /* ToolExceptionHandler.mm in Sources */ = {isa = PBXBuildFile; fileRef = 48678EA024053BE800560C58 /* ToolExceptionHandler.mm */; };
+		48678EA62407F94100560C58 /* MineDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48678EA52407F94100560C58 /* MineDataManager.swift */; };
 		7D0699CDD5EE58AB5755D219 /* Pods_CamFun_CamFunUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF457FE99105F7A9FEC0D01 /* Pods_CamFun_CamFunUITests.framework */; };
 		95D369B120FF8D1451B32AA5 /* Pods_CamFun.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85917E2458711D97E26D343A /* Pods_CamFun.framework */; };
 /* End PBXBuildFile section */
@@ -60,6 +63,7 @@
 		480BC1B724029E6200DEBED6 /* MineGradeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineGradeCell.swift; sourceTree = "<group>"; };
 		480BC1B924029EB400DEBED6 /* MineMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineMessageCell.swift; sourceTree = "<group>"; };
 		480BC1BC2402A46200DEBED6 /* MineDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineDataModel.swift; sourceTree = "<group>"; };
+		480BC1BE2403A49E00DEBED6 /* PublicUse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicUse.swift; sourceTree = "<group>"; };
 		48654A9E23FFC50D00A36C5D /* CamFun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CamFun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48654AA123FFC50D00A36C5D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48654AA323FFC50D00A36C5D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +88,10 @@
 		48654AE72401355800A36C5D /* IndexVedieManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexVedieManager.swift; sourceTree = "<group>"; };
 		48654AEA240137B000A36C5D /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
 		48654AF024013CE100A36C5D /* RecommandVedioCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommandVedioCell.swift; sourceTree = "<group>"; };
+		48678E9E24053BE700560C58 /* CamFun-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CamFun-Bridging-Header.h"; sourceTree = "<group>"; };
+		48678E9F24053BE800560C58 /* ToolExceptionHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToolExceptionHandler.h; sourceTree = "<group>"; };
+		48678EA024053BE800560C58 /* ToolExceptionHandler.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ToolExceptionHandler.mm; sourceTree = "<group>"; };
+		48678EA52407F94100560C58 /* MineDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineDataManager.swift; sourceTree = "<group>"; };
 		85917E2458711D97E26D343A /* Pods_CamFun.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CamFun.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E13B4CC5B295C6EF9CE78CC /* Pods-CamFun.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CamFun.release.xcconfig"; path = "Target Support Files/Pods-CamFun/Pods-CamFun.release.xcconfig"; sourceTree = "<group>"; };
 		9B51267892ED1F419B992A4E /* Pods-CamFunTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CamFunTests.debug.xcconfig"; path = "Target Support Files/Pods-CamFunTests/Pods-CamFunTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -212,6 +220,9 @@
 			children = (
 				48654AA123FFC50D00A36C5D /* AppDelegate.swift */,
 				48654AA323FFC50D00A36C5D /* SceneDelegate.swift */,
+				48678E9F24053BE800560C58 /* ToolExceptionHandler.h */,
+				48678EA024053BE800560C58 /* ToolExceptionHandler.mm */,
+				48678E9E24053BE700560C58 /* CamFun-Bridging-Header.h */,
 			);
 			path = "Public&Global";
 			sourceTree = "<group>";
@@ -230,6 +241,7 @@
 		48654AD423FFCA8000A36C5D /* DefineStaticType */ = {
 			isa = PBXGroup;
 			children = (
+				480BC1BE2403A49E00DEBED6 /* PublicUse.swift */,
 			);
 			path = DefineStaticType;
 			sourceTree = "<group>";
@@ -252,6 +264,7 @@
 			isa = PBXGroup;
 			children = (
 				48654AE72401355800A36C5D /* IndexVedieManager.swift */,
+				48678EA52407F94100560C58 /* MineDataManager.swift */,
 			);
 			path = DataManager;
 			sourceTree = "<group>";
@@ -347,6 +360,7 @@
 				TargetAttributes = {
 					48654A9D23FFC50D00A36C5D = {
 						CreatedOnToolsVersion = 11.3;
+						LastSwiftMigration = 1130;
 					};
 					48654AB323FFC50F00A36C5D = {
 						CreatedOnToolsVersion = 11.3;
@@ -515,12 +529,15 @@
 			files = (
 				48654AA623FFC50D00A36C5D /* BaseViewController.swift in Sources */,
 				48654AE82401355900A36C5D /* IndexVedieManager.swift in Sources */,
+				48678EA124053BE800560C58 /* ToolExceptionHandler.mm in Sources */,
 				480BC1B824029E6200DEBED6 /* MineGradeCell.swift in Sources */,
 				480BC1B624029E4E00DEBED6 /* MineInfoTopCell.swift in Sources */,
+				480BC1BF2403A49E00DEBED6 /* PublicUse.swift in Sources */,
 				48654AE324012C4D00A36C5D /* MessageViewController.swift in Sources */,
 				48654AA223FFC50D00A36C5D /* AppDelegate.swift in Sources */,
 				48654AD923FFD0E500A36C5D /* LocationViewController.swift in Sources */,
 				48654ADD23FFF98A00A36C5D /* MainTabbarViewController.swift in Sources */,
+				48678EA62407F94100560C58 /* MineDataManager.swift in Sources */,
 				48654AE124012BB400A36C5D /* MakeVideoViewController.swift in Sources */,
 				48654ADF2400047500A36C5D /* BaseNavgationController.swift in Sources */,
 				480BC1BD2402A46200DEBED6 /* MineDataModel.swift in Sources */,
@@ -703,6 +720,7 @@
 			baseConfigurationReference = D221C650EC310EF6888761D0 /* Pods-CamFun.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 94G4SCKS9Z;
 				INFOPLIST_FILE = CamFun/Info.plist;
@@ -714,6 +732,8 @@
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = naughtyboy.com.CamFuni;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CamFun/Public&Global/CamFun-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -724,6 +744,7 @@
 			baseConfigurationReference = 8E13B4CC5B295C6EF9CE78CC /* Pods-CamFun.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 94G4SCKS9Z;
 				INFOPLIST_FILE = CamFun/Info.plist;
@@ -735,6 +756,7 @@
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = naughtyboy.com.CamFuni;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CamFun/Public&Global/CamFun-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

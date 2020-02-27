@@ -17,7 +17,5 @@ enum MineDataModel {
 }
 
 
-struct MineSectionData {
-    var  datamodels:[MineDataModel]!
-}
+
 
